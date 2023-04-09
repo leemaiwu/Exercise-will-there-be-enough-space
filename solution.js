@@ -12,4 +12,15 @@ function enough(cap, on, wait) {
   }
 }
 
-console.log(enough(10, 5, 5))
+console.log(enough(10, 5, 5)) // 0
+console.log(enough(100, 60, 50)) // 10
+
+
+// Alternate Solution
+
+function simpEnough(cap, on, wait) {
+    return Math.max(wait + on - cap, 0)
+}
+
+console.log(simpEnough(10, 5, 5)) // 0
+console.log(simpEnough(100, 60, 50)) // 10
